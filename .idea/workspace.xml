@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="340283c9-9c42-42cd-ae48-4c7c2d5226b9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/apache_log4j_1_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Browser.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Browser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/VO/TestCaseVO.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/VO/TestCaseVO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestNinja.iml" afterPath="$PROJECT_DIR$/TestNinja.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TestNinja.iws" />
@@ -33,8 +29,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31982943">
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.28784648">
+              <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -709,7 +705,7 @@
       <created>1432917739975</created>
       <option name="number" value="Default" />
       <updated>1432917739975</updated>
-      <workItem from="1432917745204" duration="3072000" />
+      <workItem from="1432917745204" duration="3769000" />
     </task>
     <task id="LOCAL-00001" summary="ActionType&#10;ActionVO&#10;">
       <created>1432918245010</created>
@@ -729,11 +725,17 @@
       <option name="project" value="LOCAL" />
       <updated>1432919738262</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Log4j">
+      <created>1432921376370</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1432921376370</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3072000" />
+    <option name="totallyTimeSpent" value="3769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="810" extended-state="6" />
@@ -772,7 +774,8 @@
     <MESSAGE value="ActionType&#10;ActionVO&#10;" />
     <MESSAGE value="first commit&#10;" />
     <MESSAGE value="ActionDriver&#10;TestCaseVO&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="ActionDriver&#10;TestCaseVO&#10;" />
+    <MESSAGE value="Log4j" />
+    <option name="LAST_COMMIT_MESSAGE" value="Log4j" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -926,8 +929,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31982943">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.28784648">
+          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

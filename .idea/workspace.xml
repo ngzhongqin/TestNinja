@@ -705,7 +705,7 @@
       <created>1432917739975</created>
       <option name="number" value="Default" />
       <updated>1432917739975</updated>
-      <workItem from="1432917745204" duration="3769000" />
+      <workItem from="1432917745204" duration="3779000" />
     </task>
     <task id="LOCAL-00001" summary="ActionType&#10;ActionVO&#10;">
       <created>1432918245010</created>
@@ -731,11 +731,17 @@
       <option name="project" value="LOCAL" />
       <updated>1432921376370</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Log4j">
+      <created>1432922523804</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1432922523804</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3769000" />
+    <option name="totallyTimeSpent" value="3779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="810" extended-state="6" />

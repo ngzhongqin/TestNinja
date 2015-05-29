@@ -1,4 +1,4 @@
-package sg.ninjavan;
+package sg.ninjavan.autotest;
 
 public class Main {
 

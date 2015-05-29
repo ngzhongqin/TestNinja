@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="340283c9-9c42-42cd-ae48-4c7c2d5226b9" name="Default" comment="ActionType&#10;ActionVO&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/constants/ActionType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/VO/ActionVO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sg/ninjavan/Main.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="340283c9-9c42-42cd-ae48-4c7c2d5226b9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Browser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/constants/ErrorCode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/ExcelReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Screenshot.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Sleeper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jexcelapi.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/selenium_2_45.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestNinja.iml" afterPath="$PROJECT_DIR$/TestNinja.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TestNinja.iws" />
@@ -40,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionVO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ActionVO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/VO/ActionVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67164177">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
               <folding>
                 <element signature="e#2351#2352#0" expanded="true" />
                 <element signature="e#2379#2380#0" expanded="true" />
@@ -87,6 +91,69 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ExcelReader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/ExcelReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.9509594">
+              <caret line="61" column="15" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#929#939#0" expanded="true" />
+                <element signature="e#2528#2529#0" expanded="true" />
+                <element signature="e#2565#2566#0" expanded="true" />
+                <element signature="e#2607#2608#0" expanded="true" />
+                <element signature="e#2644#2645#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Browser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Browser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sleeper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Sleeper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ErrorCode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/constants/ErrorCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Screenshot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Screenshot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#455#456#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ActionType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/constants/ActionType.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -122,6 +189,11 @@
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/ActionVO.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/constants/ActionType.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/VO/ActionVO.java" />
+        <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/ExcelReader.java" />
+        <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Screenshot.java" />
+        <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/constants/ErrorCode.java" />
+        <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Browser.java" />
+        <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Sleeper.java" />
       </list>
     </option>
   </component>
@@ -177,6 +249,10 @@
               <option name="myItemId" value="TestNinja" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -225,6 +301,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestNinja" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestNinja" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -263,6 +365,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../library/selenium-2.45.0/libs" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -523,12 +629,19 @@
       <created>1432917739975</created>
       <option name="number" value="Default" />
       <updated>1432917739975</updated>
-      <workItem from="1432917745204" duration="467000" />
+      <workItem from="1432917745204" duration="938000" />
     </task>
+    <task id="LOCAL-00001" summary="ActionType&#10;ActionVO&#10;">
+      <created>1432918245010</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1432918245010</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="467000" />
+    <option name="totallyTimeSpent" value="938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="810" extended-state="6" />
@@ -594,8 +707,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/VO/ActionVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67164177">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
           <folding>
             <element signature="e#2351#2352#0" expanded="true" />
             <element signature="e#2379#2380#0" expanded="true" />
@@ -637,5 +750,134 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/constants/ErrorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Browser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Sleeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Screenshot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/ExcelReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9509594">
+          <caret line="61" column="15" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#929#939#0" expanded="true" />
+            <element signature="e#2528#2529#0" expanded="true" />
+            <element signature="e#2565#2566#0" expanded="true" />
+            <element signature="e#2607#2608#0" expanded="true" />
+            <element signature="e#2644#2645#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>TestNinja</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>libs</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

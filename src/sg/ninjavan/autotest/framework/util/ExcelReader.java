@@ -5,6 +5,7 @@ import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
+import sg.ninjavan.autotest.Main;
 import sg.ninjavan.autotest.framework.VO.ActionVO;
 
 import java.io.File;
@@ -21,23 +22,27 @@ public class ExcelReader {
         try {
             test_case_workbook = Workbook.getWorkbook(new File("AutomatedTesting.xls"));
         } catch (IOException e) {
-            System.out.println("<Error>: IOException - "+e.getMessage());
+//            System.out.println("<Error>: IOException - "+e.getMessage());
+            Main.logger.error("IOException - "+e.getMessage());
 //            e.printStackTrace();
         } catch (BiffException e) {
-            System.out.println("<Error>: BiffException - "+e.getMessage());
+//            System.out.println("<Error>: BiffException - "+e.getMessage());
+            Main.logger.error("BiffException - "+e.getMessage());
 //            e.printStackTrace();
+        }catch (Exception e){
+            Main.logger.error("Exception - "+e.getMessage());
         }
     };
 
-    public ArrayList<ActionVO> getActionVOList(){
+    public ArrayList<ActionVO> getActionVOList(int sheet_num){
         ArrayList<ActionVO> returnArrayList = new ArrayList<ActionVO>();
-        int row = 1;
-        String checkString = getCell(1,0,row);
+        int row = 2;
+        String checkString = getCell(sheet_num,0,row);
         while(checkString!=null){
-            ActionVO actionVO = getActionVO(1,row);
+            ActionVO actionVO = getActionVO(sheet_num,row);
             returnArrayList.add(actionVO);
             row++;
-            checkString = getCell(1,0,row);
+            checkString = getCell(sheet_num,0,row);
         }
         return returnArrayList;
     };
@@ -82,5 +87,17 @@ public class ExcelReader {
 
     public String getResultFolderPath(){
         return getCell(0,2,2);
+    }
+
+    public String getTestCaseDescription(int sheet_num) {
+        return getCell(sheet_num,1,0);
+    }
+
+    public int getNumberOfAvailableSheets(){
+        int returnInt = -1;
+        if(test_case_workbook!=null){
+            returnInt = test_case_workbook.getNumberOfSheets();
+        }
+        return returnInt;
     }
 }

@@ -1,13 +1,18 @@
 package sg.ninjavan.autotest;
 
 import org.apache.log4j.*;
-import org.apache.log4j.xml.DOMConfigurator;
+import sg.ninjavan.autotest.framework.VO.TestPlanVO;
+import sg.ninjavan.autotest.framework.VOSetter.TestPlanVOSetter;
 
 public class Main {
-    private static Logger logger = Logger.getLogger(Main.class);
+    public static Logger logger = Logger.getLogger(Main.class);
+
     public static void main(String[] args) {
-        DOMConfigurator.configure("log4j.xml");
-        PropertyConfigurator.configure("log4j.properties");
-        logger.info("start");
+        PropertyConfigurator.configure("conf/log4j.properties");
+        logger.info("Start of AutoTester");
+
+        TestPlanVO testPlanVO = new TestPlanVO();
+        TestPlanVOSetter testPlanVOSetter = new TestPlanVOSetter();
+
     }
 }

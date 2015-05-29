@@ -16,4 +16,35 @@ public class TestCaseVO {
         this.actionVOs=actionVOs;
     }
 
+    public ArrayList<ActionVO> getActionVOs() {
+        return actionVOs;
+    }
+
+    public void setActionVOs(ArrayList<ActionVO> actionVOs) {
+        this.actionVOs = actionVOs;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getTotal_steps() {
+        return total_steps;
+    }
+
+    public void setTotal_steps(int total_steps) {
+        this.total_steps = total_steps;
+    }
+
+    public int getTotal_steps_passed() {
+        return total_steps_passed;
+    }
+
+    public void setTotal_steps_passed(int total_steps_passed) {
+        this.total_steps_passed = total_steps_passed;
+    }
 }

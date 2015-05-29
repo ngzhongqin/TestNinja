@@ -112,7 +112,8 @@ public class Browser {
             Actions actions = new Actions(driver);
             actions.moveToElement(element);
             actions.perform();
-            this.sleep(2);
+            Sleeper sleeper = new Sleeper();
+            sleeper.sleep(2);
 
             returnBoolean = true;
         }catch (Exception e){

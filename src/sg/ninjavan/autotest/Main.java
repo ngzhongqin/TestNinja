@@ -11,8 +11,14 @@ public class Main {
         PropertyConfigurator.configure("conf/log4j.properties");
         logger.info("Start of AutoTester");
 
-        TestPlanVO testPlanVO = new TestPlanVO();
-        TestPlanVOSetter testPlanVOSetter = new TestPlanVOSetter();
 
+        TestPlanVOSetter testPlanVOSetter = new TestPlanVOSetter();
+        TestPlanVO testPlanVO = testPlanVOSetter.getTestPlan();
+
+        logger.info("testPlanVO: "+testPlanVO);
+        if(testPlanVO!=null){
+            if(testPlanVO.getTestCaseVOs()!=null)
+                logger.info("testPlanVO.size: "+testPlanVO.getTestCaseVOs().size());
+        }
     }
 }

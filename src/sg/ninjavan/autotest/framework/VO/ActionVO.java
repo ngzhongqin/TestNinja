@@ -1,11 +1,13 @@
 package sg.ninjavan.autotest.framework.VO;
 
+import org.apache.log4j.Logger;
 import sg.ninjavan.autotest.framework.constants.ActionType;
 
 /**
  * Created by zhongqinng on 26/5/15.
  */
 public class ActionVO {
+    private Logger logger = Logger.getLogger(ActionVO.class);
     private String sn;
     private ActionType action;
     private String input;
@@ -23,13 +25,13 @@ public class ActionVO {
                     String description,
                     String screenshot_needed,
                     String expectedValue){
-        System.out.println("sn -> " + sn
-                + " actionString -> " + actionString
-                + " xPath -> "+xPath
-                + " input -> "+ input
-                + " description -> "+description
-                + " screenshot_needed -> "+screenshot_needed
-                + " expectedValue -> "+expectedValue);
+        logger.info("ActionVO created - sn= " + sn
+                + " actionString= " + actionString
+                + " xPath= "+xPath
+                + " input= "+ input
+                + " description= "+description
+                + " screenshot_needed= "+screenshot_needed
+                + " expectedValue= "+expectedValue);
 
         if(sn!=null) {
             this.sn = sn;

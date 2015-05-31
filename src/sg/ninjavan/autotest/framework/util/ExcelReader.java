@@ -20,7 +20,7 @@ public class ExcelReader {
 
     public ExcelReader(){
         try {
-            test_case_workbook = Workbook.getWorkbook(new File("AutomatedTesting.xls"));
+            test_case_workbook = Workbook.getWorkbook(new File("testScript/AutomatedTesting.xls"));
         } catch (IOException e) {
 //            System.out.println("<Error>: IOException - "+e.getMessage());
             Main.logger.error("IOException - "+e.getMessage());
@@ -34,31 +34,8 @@ public class ExcelReader {
         }
     };
 
-    public ArrayList<ActionVO> getActionVOList(int sheet_num){
-        ArrayList<ActionVO> returnArrayList = new ArrayList<ActionVO>();
-        int row = 2;
-        String checkString = getCell(sheet_num,0,row);
-        while(checkString!=null){
-            ActionVO actionVO = getActionVO(sheet_num,row);
-            returnArrayList.add(actionVO);
-            row++;
-            checkString = getCell(sheet_num,0,row);
-        }
-        return returnArrayList;
-    };
 
-    private ActionVO getActionVO(int sheet_number, int row){
-        String sn = getCell(sheet_number,0,row);
-        String action = getCell(sheet_number,1,row);
-        String xPath = getCell(sheet_number,2,row);
-        String input = getCell(sheet_number,3,row);
-        String description = getCell(sheet_number,4,row);
-        String screenshot_needed = getCell(sheet_number,5,row);
-        String expectedValue = getCell(sheet_number,6,row);
 
-        ActionVO returnActionVO = new ActionVO(sn,action,xPath,input,description,screenshot_needed,expectedValue);
-        return returnActionVO;
-    }
 
     public String getCell(int sheet_number, int col, int row){
         String returnString = null;
@@ -96,7 +73,7 @@ public class ExcelReader {
     public int getNumberOfAvailableSheets(){
         int returnInt = -1;
         if(test_case_workbook!=null){
-            returnInt = test_case_workbook.getNumberOfSheets();
+            returnInt = test_case_workbook.getNumberOfSheets() - 1;
         }
         return returnInt;
     }

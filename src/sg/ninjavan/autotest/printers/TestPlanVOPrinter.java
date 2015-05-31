@@ -1,5 +1,8 @@
 package sg.ninjavan.autotest.printers;
 
+import jxl.Cell;
+import jxl.format.Colour;
+import jxl.format.Pattern;
 import org.apache.log4j.Logger;
 import sg.ninjavan.autotest.framework.VO.TestCaseVO;
 import sg.ninjavan.autotest.framework.VO.TestPlanVO;
@@ -40,6 +43,7 @@ public class TestPlanVOPrinter {
     }
 
     private void printCoverPage(){
+
         excelWriter.createSheet("Cover",0);
         excelWriter.writeCell(0,0,0,"TC");
         excelWriter.writeCell(0,1,0,"Description");

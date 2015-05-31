@@ -20,9 +20,10 @@ public class ExcelWriter {
 
     public ExcelWriter(){
         ExcelReader excelReader=new ExcelReader();
+        DateHandler dateHandler = new DateHandler();
         {
             try {
-                wworkbook = Workbook.createWorkbook(new File(excelReader.getResultFolderPath()+"result.xls"));
+                wworkbook = Workbook.createWorkbook(new File(excelReader.getResultFolderPath()+dateHandler.getDateString()+"_result.xls"));
             } catch (Exception e) {
                 logger.error("Fail to create Workbook");
             }
@@ -31,7 +32,7 @@ public class ExcelWriter {
     }
 
     public void writeCell(int sheet_num,int col,int row,String content){
-        logger.info("writeCell sheet_num=" + sheet_num + " col=" + col+" row="+row+" content="+content);
+        logger.info("writeCell sheet_num=" + sheet_num + " col=" + col + " row=" + row + " content=" + content);
         WritableSheet writableSheet = wworkbook.getSheet(sheet_num);
         Label label = new Label(col,row,content);
         try {
@@ -63,4 +64,5 @@ public class ExcelWriter {
             logger.error("close() Exception");
         }
     }
+
 }

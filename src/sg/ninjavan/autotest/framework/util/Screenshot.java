@@ -23,7 +23,7 @@ public class Screenshot {
         try {
             File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             ExcelReader excelReader=new ExcelReader();
-            FileUtils.copyFile(scrFile, new File(excelReader.getResultFolderPath() + actionVO.getSn() + "_" + actionVO.getDescription() + ".png"));
+            FileUtils.copyFile(scrFile, new File(excelReader.getResultFolderPath()+"/screenshots/" + actionVO.getSn() + "_" + actionVO.getDescription() + ".png"));
             returnBoolean = true;
         }catch (Exception e){
             returnBoolean = false;

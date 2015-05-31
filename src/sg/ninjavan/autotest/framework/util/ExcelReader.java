@@ -5,32 +5,29 @@ import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
+import org.apache.log4j.Logger;
 import sg.ninjavan.autotest.Main;
-import sg.ninjavan.autotest.framework.VO.ActionVO;
+
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created by zhongqinng on 26/5/15.
  */
 public class ExcelReader {
+    public static Logger logger = Logger.getLogger(ExcelReader.class);
     private Workbook test_case_workbook;
 
     public ExcelReader(){
         try {
             test_case_workbook = Workbook.getWorkbook(new File("testScript/AutomatedTesting.xls"));
         } catch (IOException e) {
-//            System.out.println("<Error>: IOException - "+e.getMessage());
             Main.logger.error("IOException - "+e.getMessage());
-//            e.printStackTrace();
         } catch (BiffException e) {
-//            System.out.println("<Error>: BiffException - "+e.getMessage());
-            Main.logger.error("BiffException - "+e.getMessage());
-//            e.printStackTrace();
+            logger.error("BiffException - "+e.getMessage());
         }catch (Exception e){
-            Main.logger.error("Exception - "+e.getMessage());
+            logger.error("Exception - "+e.getMessage());
         }
     };
 

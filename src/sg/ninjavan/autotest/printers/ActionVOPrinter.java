@@ -38,16 +38,5 @@ public class ActionVOPrinter {
 
     }
 
-    public void printColumnName(int sheet_num,ExcelWriter excelWriter){
-        logger.info("printColumnName()");
-        excelWriter.writeCell(sheet_num, 0, 0, "S/N");
-        excelWriter.writeCell(sheet_num,1,0,"ActionType");
-        excelWriter.writeCell(sheet_num,2,0,"xPath");
-        excelWriter.writeCell(sheet_num,3,0,"Input");
-        excelWriter.writeCell(sheet_num,4,0,"Description");
-        excelWriter.writeCell(sheet_num, 5, 0, "Screenshot Needed");
-        excelWriter.writeCell(sheet_num,6,0,"Expected Value");
-        excelWriter.writeCell(sheet_num,7,0,"Actual Value");
-        excelWriter.writeCell(sheet_num, 8, 0, "Passed");
-    }
+
 }

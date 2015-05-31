@@ -1,8 +1,6 @@
-package sg.ninjavan.autotest.framework.VOSetter;
+package sg.ninjavan.autotest.setters;
 
 import org.apache.log4j.Logger;
-import sg.ninjavan.autotest.Main;
-import sg.ninjavan.autotest.framework.VO.ActionVO;
 import sg.ninjavan.autotest.framework.VO.TestCaseVO;
 import sg.ninjavan.autotest.framework.VO.TestPlanVO;
 import sg.ninjavan.autotest.framework.util.ExcelReader;

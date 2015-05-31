@@ -1,6 +1,7 @@
 package sg.ninjavan.autotest.framework.util;
 
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,12 +9,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import sg.ninjavan.autotest.framework.VO.ActionVO;
-import sg.ninjavan.autotest.framework.constants.ErrorCode;
 
 /**
  * Created by zhongqinng on 26/5/15.
  */
 public class Browser {
+    private Logger logger = Logger.getLogger(Browser.class);
     private WebDriver driver;
 
     public Browser(){
@@ -22,45 +23,45 @@ public class Browser {
         driver = new ChromeDriver();
     }
 
-    public boolean openBrowser(String url){
-        System.out.println("url: "+url);
-        boolean returnBoolean = false;
+    public ActionVO openBrowser(ActionVO actionVO){
+        logger.info("openBroswer() ");
+        ActionVO returnActionVO = actionVO;
+        returnActionVO.setPass_fail(false);
         try {
-            driver.get(url);
-            returnBoolean = true;
+            driver.get(returnActionVO.getInput());
+            returnActionVO.setPass_fail(true);
         }catch (Exception e){
-            returnBoolean = false;
-            System.out.println("<Error>: Exception - "+e.getMessage() + " url: "+url);
+            returnActionVO.setPass_fail(false);
+            logger.error("openBrowser fail Description="+actionVO.getDescription()+" input="+actionVO.getInput());
         }
-        return returnBoolean;
+        return returnActionVO;
     }
 
-    public boolean enterTextBox(String xPath, String textString){
-        boolean returnBoolean = false;
+    public ActionVO enterTextBox(ActionVO actionVO){
+        ActionVO returnActionVO = actionVO;
         try {
-            driver.findElement(By.xpath(xPath)).sendKeys(textString);
+            driver.findElement(By.xpath(returnActionVO.getxPath())).sendKeys(returnActionVO.getInput());
 
-            returnBoolean = true;
+            returnActionVO.setPass_fail(true);
         }catch (Exception e){
-            returnBoolean = false;
-            System.out.println("<Error>: enterTextBox Exception - "+e.getMessage() + " xpath: "+xPath);
+            returnActionVO.setPass_fail(false);
+            logger.error("enterTextBox fail Description="+actionVO.getDescription()+" xPath="+actionVO.getxPath()+" input="+actionVO.getInput());
         }
-        return returnBoolean;
+        return returnActionVO;
     }
 
-    public boolean clickButton(String xPath){
-        boolean returnBoolean = false;
+    public ActionVO clickButton(ActionVO actionVO){
+        ActionVO returnActionVO = actionVO;
+        returnActionVO.setPass_fail(false);
         try {
-            driver.findElement(By.xpath(xPath)).click();
+            driver.findElement(By.xpath(returnActionVO.getxPath())).click();
 
-            returnBoolean = true;
+            returnActionVO.setPass_fail(true);
         }catch (Exception e){
-            returnBoolean = false;
-            System.out.println("<Error>: clickButton Exception - "+e.getMessage() + " xpath: "+xPath);
-            System.out.println("<Error>: xpath not found: "+xPath);
-            System.exit(ErrorCode.ELEMENT_NOT_FOUND);
+            returnActionVO.setPass_fail(false);
+            logger.error("clickButton fail Description=" + actionVO.getDescription() + " xPath=" + actionVO.getxPath());
         }
-        return returnBoolean;
+        return returnActionVO;
     }
 
     public boolean closeBrowser(){
@@ -71,57 +72,59 @@ public class Browser {
             returnBoolean = true;
         }catch (Exception e){
             returnBoolean = false;
-            System.out.println("<Error>: closeBrowser Exception - "+e.getMessage());
+            logger.error("closeBrowser fail");
         }
         return returnBoolean;
     }
 
-    public boolean fileInput(String xPath, String input){
-        boolean returnBoolean = false;
+    public ActionVO fileInput(ActionVO actionVO){
+        ActionVO returnActionVO = actionVO;
+        returnActionVO.setPass_fail(false);
         try {
-            driver.findElement(By.xpath(xPath)).sendKeys(input);
+            driver.findElement(By.xpath(returnActionVO.getxPath())).sendKeys(returnActionVO.getInput());
 
-            returnBoolean = true;
+            returnActionVO.setPass_fail(true);
         }catch (Exception e){
-            returnBoolean = false;
-            System.out.println("<Error>: fileInput Exception - "+e.getMessage() + " xpath: "+xPath+" input: "+input);
-            System.exit(ErrorCode.ELEMENT_NOT_FOUND);
+            returnActionVO.setPass_fail(false);
+            logger.error("fileInput fail Description=" + actionVO.getDescription() + " xPath=" + actionVO.getxPath() + " input=" + actionVO.getInput());
         }
-        return returnBoolean;
+        return returnActionVO;
     }
 
-    public boolean dropDown(String xPath, String input){
-        boolean returnBoolean = false;
+
+    public ActionVO dropDown(ActionVO actionVO){
+        ActionVO returnActionVO = actionVO;
+        returnActionVO.setPass_fail(false);
         try {
-            Select select = new Select( driver.findElement(By.xpath(xPath)));
+            Select select = new Select( driver.findElement(By.xpath(returnActionVO.getxPath())));
             select.deselectAll();
-            select.selectByValue(input);
+            select.selectByValue(returnActionVO.getInput());
 
-            returnBoolean = true;
+            returnActionVO.setPass_fail(true);
         }catch (Exception e){
-            returnBoolean = false;
-            System.out.println("<Error>: dropDown Exception - "+e.getMessage() + " xpath: "+xPath+" input: "+input);
+            returnActionVO.setPass_fail(false);
+            logger.error("dropDown fail Description=" + actionVO.getDescription() + " xPath=" + actionVO.getxPath() + " input=" + actionVO.getInput());
         }
-        return returnBoolean;
+        return returnActionVO;
     }
 
-    public boolean hover(String xPath){
-        boolean returnBoolean = false;
+    public ActionVO hover(ActionVO actionVO){
+        ActionVO returnActionVO = actionVO;
+        returnActionVO.setPass_fail(false);
         try {
-            WebElement element = driver.findElement(By.xpath(xPath));
+            WebElement element = driver.findElement(By.xpath(returnActionVO.getxPath()));
             Actions actions = new Actions(driver);
             actions.moveToElement(element);
             actions.perform();
             Sleeper sleeper = new Sleeper();
             sleeper.sleep(2);
 
-            returnBoolean = true;
+            returnActionVO.setPass_fail(true);
         }catch (Exception e){
-            returnBoolean = false;
-            System.out.println("<Error>: hover Exception - "+e.getMessage() + " xpath: "+xPath);
-            System.exit(ErrorCode.ELEMENT_NOT_FOUND);
+            returnActionVO.setPass_fail(false);
+            logger.error("hover fail Description=" + actionVO.getDescription() + " xPath=" + actionVO.getxPath());
         }
-        return returnBoolean;
+        return returnActionVO;
     }
 
     public ActionVO checkValue(ActionVO actionVO){
@@ -129,12 +132,17 @@ public class Browser {
         try {
             WebElement element = driver.findElement(By.xpath(returnActionVO.getxPath()));
             String actualValue = element.getText();
-            System.out.println("checkValue: actualValue: "+actualValue+" expectedValue: ");
+            returnActionVO.setActualValue(actualValue);
+            if(returnActionVO.getExpectedValue().equals(returnActionVO.getActualValue())){
+                returnActionVO.setPass_fail(true);
+            }
 
         }catch (Exception e){
-            System.out.println("<Error>: checkValue Exception - "+e.getMessage() + " xpath: "+actionVO);
-            System.exit(ErrorCode.ELEMENT_NOT_FOUND);
+            returnActionVO.setPass_fail(false);
+            logger.error("checkValue fail Description=" + returnActionVO.getDescription() + " xPath=" + returnActionVO.getxPath()+
+            " actualValue="+returnActionVO.getActualValue()+ " expectedValue="+returnActionVO.getExpectedValue());
         }
+
         return returnActionVO;
     }
 

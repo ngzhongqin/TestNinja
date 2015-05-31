@@ -4,47 +4,57 @@ import org.apache.log4j.Logger;
 import sg.ninjavan.autotest.framework.VO.ActionVO;
 import sg.ninjavan.autotest.framework.util.Browser;
 
+
 public class ActionVODriver {
     private Logger logger = Logger.getLogger(ActionVODriver.class);
     public ActionVODriver(){
     }
 
 
-    public void start(ActionVO actionVO, Browser browser) {
+    public ActionVO start(ActionVO actionVO, Browser browser) {
         logger.info("Start() ActionVO: SN="+actionVO.getSn()+" Description="+actionVO.getDescription());
+        ActionVO returnActionVO = actionVO;
         if(actionVO!=null){
             switch (actionVO.getAction()){
                 case OpenBrowser:
-                    browser.openBrowser(actionVO.getInput());
+                    returnActionVO = browser.openBrowser(actionVO);
                     browser.takeScreenshot(actionVO);
                     break;
                 case EnterText:
-                    browser.enterTextBox(actionVO.getxPath(),actionVO.getInput());
+                    returnActionVO = browser.enterTextBox(actionVO);
                     browser.takeScreenshot(actionVO);
                     break;
                 case ClickButton:
-                    browser.clickButton(actionVO.getxPath());
+                    returnActionVO = browser.clickButton(actionVO);
                     browser.takeScreenshot(actionVO);
                     break;
                 case FileInput:
-                    browser.fileInput(actionVO.getxPath(),actionVO.getInput());
+                    returnActionVO = browser.fileInput(actionVO);
                     browser.takeScreenshot(actionVO);
                     break;
                 case DropDown:
-                    browser.dropDown(actionVO.getxPath(),actionVO.getInput());
+                    returnActionVO = browser.dropDown(actionVO);
                     browser.takeScreenshot(actionVO);
                     break;
                 case Hover:
-                    browser.hover(actionVO.getxPath());
+                    returnActionVO =  browser.hover(actionVO);
                     browser.takeScreenshot(actionVO);
                     break;
                 case CheckValue:
-                    browser.checkValue(actionVO);
+                    returnActionVO = browser.checkValue(actionVO);
                     browser.takeScreenshot(actionVO);
                     break;
                 default:
                     break;
             }
         }
+        print_result_on_log(returnActionVO);
+        return returnActionVO;
+    }
+
+    private void print_result_on_log(ActionVO actionVO){
+        logger.info("Result Description="+actionVO.getDescription()
+                    + " ActionType="+actionVO.getAction()
+                    + " Pass="+actionVO.isPass_fail());
     }
 }

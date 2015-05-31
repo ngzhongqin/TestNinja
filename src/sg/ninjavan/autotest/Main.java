@@ -2,7 +2,7 @@ package sg.ninjavan.autotest;
 
 import org.apache.log4j.*;
 import sg.ninjavan.autotest.framework.VO.TestPlanVO;
-import sg.ninjavan.autotest.framework.VOSetter.TestPlanVOSetter;
+import sg.ninjavan.autotest.setters.TestPlanVOSetter;
 import sg.ninjavan.autotest.framework.util.ExcelReader;
 import sg.ninjavan.autotest.drivers.TestPlanDriver;
 
@@ -18,14 +18,6 @@ public class Main {
         //Get Test Plan
         TestPlanVOSetter testPlanVOSetter = new TestPlanVOSetter();
         TestPlanVO testPlanVO = testPlanVOSetter.getTestPlan();
-
-        /*
-        logger.info("testPlanVO: "+testPlanVO);
-        if(testPlanVO!=null){
-            if(testPlanVO.getTestCaseVOs()!=null)
-                logger.info("testPlanVO.size: "+testPlanVO.getTestCaseVOs().size());
-        }
-        */
 
         //Start of Test Plan
         TestPlanDriver testPlanDriver = new TestPlanDriver(testPlanVO);

@@ -31,8 +31,8 @@ public class TestPlanDriver {
 
         while (i<size){
             TestCaseVO testCaseVO = testPlanVO.getTestCaseVOs().get(i);
-            TestCaseVODriver testCaseVODriver = new TestCaseVODriver(testCaseVO);
-            testCaseVODriver.start(browser);
+            TestCaseVODriver testCaseVODriver = new TestCaseVODriver();
+            testCaseVODriver.start(browser,testCaseVO);
             i++;
         }
 

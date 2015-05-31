@@ -11,15 +11,13 @@ import sg.ninjavan.autotest.framework.util.Browser;
 public class TestCaseVODriver {
     private final ActionVODriver actionVODriver;
     private Logger logger = Logger.getLogger(TestCaseVODriver.class);
-    private TestCaseVO testCaseVO;
 
-    public TestCaseVODriver(TestCaseVO testCaseVO){
+    public TestCaseVODriver(){
         logger.info("TestCaseVODriver Created");
-        this.testCaseVO=testCaseVO;
         this.actionVODriver = new ActionVODriver();
     }
 
-    public TestCaseVO start(Browser browser) {
+    public TestCaseVO start(Browser browser,TestCaseVO testCaseVO) {
         logger.info("start()");
         int i=0;
         int size = -1;
@@ -31,12 +29,37 @@ public class TestCaseVODriver {
         logger.info("start() i="+i+" size="+size);
 
         while (i<size){
-            ActionVO actionVO = testCaseVO.getActionVOs().get(i);
-            actionVODriver.start(actionVO,browser);
+            actionVODriver.start(testCaseVO.getActionVOs().get(i),browser);
             i++;
         }
 
+        testCaseVO = setTotalAndPassedSteps(testCaseVO);
         return testCaseVO;
+    }
+
+    private TestCaseVO setTotalAndPassedSteps(TestCaseVO testCaseVO){
+        int i=0;
+        int passed =0;
+        int size = -1;
+        if(testCaseVO!=null){
+            if(testCaseVO.getActionVOs()!=null){
+                size = testCaseVO.getActionVOs().size();
+            }
+        }
+        logger.info("setTotalAndPassedSteps() i="+i+" size="+size);
+
+        while (i<size){
+            ActionVO actionVO = testCaseVO.getActionVOs().get(i);
+            if(actionVO.isPass_fail())
+                passed++;
+            i++;
+        }
+
+        testCaseVO.setTotal_steps(size);
+        testCaseVO.setTotal_steps_passed(passed);
+
+        return testCaseVO;
+
     }
 
 }

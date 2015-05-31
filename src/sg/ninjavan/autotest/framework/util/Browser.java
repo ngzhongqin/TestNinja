@@ -117,7 +117,8 @@ public class Browser {
             actions.moveToElement(element);
             actions.perform();
             Sleeper sleeper = new Sleeper();
-            sleeper.sleep(2);
+            //hover takes more time
+            sleeper.sleep(4);
 
             returnActionVO.setPass_fail(true);
         }catch (Exception e){

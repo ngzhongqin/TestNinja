@@ -10,10 +10,12 @@ public class TestCaseVO {
     private String description;
     private int total_steps;
     private int total_steps_passed;
+    private boolean passed;
 
     public TestCaseVO(String description, ArrayList<ActionVO> actionVOs){
         this.description = description;
         this.actionVOs=actionVOs;
+        this.passed=false;
     }
 
     public ArrayList<ActionVO> getActionVOs() {
@@ -46,5 +48,18 @@ public class TestCaseVO {
 
     public void setTotal_steps_passed(int total_steps_passed) {
         this.total_steps_passed = total_steps_passed;
+    }
+
+    public boolean isPassed() {
+        if(total_steps==total_steps_passed)
+            this.passed=true;
+        else
+            this.passed=false;
+
+        return passed;
+    }
+
+    public void setPassed(boolean passed) {
+        this.passed = passed;
     }
 }

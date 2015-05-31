@@ -66,6 +66,10 @@ public class ExcelReader {
         return getCell(0,2,2);
     }
 
+    public String getLog4JPath(){
+        return getCell(0,2,3);
+    }
+
     public String getTestCaseDescription(int sheet_num) {
         return getCell(sheet_num,1,0);
     }

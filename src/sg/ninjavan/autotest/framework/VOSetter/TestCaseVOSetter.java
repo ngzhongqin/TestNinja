@@ -29,6 +29,9 @@ public class TestCaseVOSetter {
         }
         logger.info("sheet_num = "+sheet_num+ " description: "+description+" total_steps= "+total_steps);
 
+        returnTestCaseVO = new TestCaseVO(description,actionVOs);
+        returnTestCaseVO.setTotal_steps(total_steps);
+
         return returnTestCaseVO;
     }
 

@@ -1,11 +1,15 @@
 package sg.ninjavan.autotest.framework.util;
 
 
+import com.gargoylesoftware.htmlunit.BrowserVersion;
+import com.opera.core.systems.OperaDesktopDriver;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import sg.ninjavan.autotest.framework.VO.ActionVO;
@@ -20,8 +24,19 @@ public class Browser {
 
     public Browser(){
         ExcelReader excelReader = new ExcelReader();
+        /*
+            Changing the driver from Chrome to Firefox.
+            Chrome currently doesn't support full screen screenshot.
+            http://stackoverflow.com/questions/3422262/take-a-screenshot-with-selenium-webdriver
+            http://stackoverflow.com/questions/17885169/selenium-chrome-driver-makes-screenshot-just-of-visible-part-of-page
+         */
+
+
         System.setProperty("webdriver.chrome.driver", excelReader.getChromeDriverPath());
         driver = new ChromeDriver();
+
+//        driver = new FirefoxDriver();
+
     }
 
     public ActionVO openBrowser(ActionVO actionVO){
@@ -55,6 +70,12 @@ public class Browser {
         ActionVO returnActionVO = actionVO;
         returnActionVO.setPass_fail(false);
         try {
+
+            WebElement element = driver.findElement(By.xpath(returnActionVO.getxPath()));
+            Actions actions = new Actions(driver);
+            actions.moveToElement(element);
+            actions.perform();
+
             driver.findElement(By.xpath(returnActionVO.getxPath())).click();
 
             returnActionVO.setPass_fail(true);

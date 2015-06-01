@@ -21,6 +21,8 @@ public class Screenshot {
     }
 
     public ActionVO takeScreenshot(ActionVO actionVO, int test_case){
+        Sleeper sleeper=new Sleeper();
+        sleeper.sleep(5);
         ActionVO returnActionVO = actionVO;
         try {
             File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

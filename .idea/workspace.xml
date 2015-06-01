@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="340283c9-9c42-42cd-ae48-4c7c2d5226b9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/html/TestPlanVOPrinter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/ExcelReader.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelReader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/ExcelWriter.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelWriter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/ActionVOPrinter.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/excel/ActionVOPrinter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/TestCaseVOPrinter.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/excel/TestCaseVOPrinter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/TestPlanVOPrinter.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/excel/TestPlanVOPrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/VO/ActionVO.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/VO/ActionVO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/drivers/ActionVODriver.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/drivers/ActionVODriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/setters/ActionVOSetter.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/setters/ActionVOSetter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Browser.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Browser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testScript/AutomatedTesting.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/html/HtmlWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/html/TestPlanVOHtmlPrinter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/reportTemplate.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/html/TestPlanVOPrinter.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelReader.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Screenshot.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Screenshot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/drivers/TestCaseVODriver.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/drivers/TestCaseVODriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/setters/TestCaseVOSetter.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/setters/TestCaseVOSetter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/drivers/TestPlanDriver.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/drivers/TestPlanDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sg/ninjavan/autotest/setters/TestPlanVOSetter.java" afterPath="$PROJECT_DIR$/src/sg/ninjavan/autotest/setters/TestPlanVOSetter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TestNinja.iws" />
@@ -43,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Browser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Browser.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="152" column="56" selection-start-line="152" selection-start-column="56" selection-end-line="152" selection-end-column="56" />
+            <state vertical-scroll-proportion="1.1044776">
+              <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,22 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionVOPrinter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/excel/ActionVOPrinter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Screenshot.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Screenshot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Screenshot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86353946">
+            <state vertical-scroll-proportion="0.0">
               <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,27 +94,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionVO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/VO/ActionVO.java">
+      <file leaf-file-name="TestPlanVOHtmlPrinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/html/TestPlanVOHtmlPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3925#3926#0" expanded="true" />
-                <element signature="e#3962#3963#0" expanded="true" />
-                <element signature="e#4022#4023#0" expanded="true" />
-                <element signature="e#4074#4075#0" expanded="true" />
+                <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#480#481#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCaseVOPrinter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/excel/TestCaseVOPrinter.java">
+      <file leaf-file-name="TestPlanVOPrinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/excel/TestPlanVOPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="70" />
+              <caret line="19" column="5" selection-start-line="16" selection-start-column="3" selection-end-line="19" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,25 +124,35 @@
         <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelWriter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+              <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="137" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2333#2334#0" expanded="true" />
-                <element signature="e#2387#2388#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestPlanVOPrinter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/html/TestPlanVOPrinter.java">
+      <file leaf-file-name="HtmlWriter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/html/HtmlWriter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#428#429#0" expanded="true" />
-                <element signature="e#470#471#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExcelReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2122#2123#0" expanded="true" />
+                <element signature="e#2159#2160#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -217,11 +204,9 @@
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/ExcelWriter.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/DateHandler.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/setters/TestPlanVOSetter.java" />
-        <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/excel/TestCaseVOPrinter.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelWriter.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/excel/TestPlanVOPrinter.java" />
-        <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/html/TestPlanVOPrinter.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/VO/ActionVO.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/excel/ActionVOPrinter.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Browser.java" />
@@ -229,6 +214,10 @@
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/drivers/TestCaseVODriver.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/drivers/TestPlanDriver.java" />
         <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Screenshot.java" />
+        <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/html/HtmlWriter.java" />
+        <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelReader.java" />
+        <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/html/TestPlanVOPrinter.java" />
+        <option value="$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java" />
       </list>
     </option>
   </component>
@@ -390,10 +379,6 @@
               <option name="myItemId" value="framework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -440,6 +425,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestNinja" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestNinja" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="excel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -765,7 +788,7 @@
       <created>1432917739975</created>
       <option name="number" value="Default" />
       <updated>1432917739975</updated>
-      <workItem from="1432917745204" duration="31363000" />
+      <workItem from="1432917745204" duration="33772000" />
     </task>
     <task id="LOCAL-00001" summary="ActionType&#10;ActionVO&#10;">
       <created>1432918245010</created>
@@ -857,11 +880,17 @@
       <option name="project" value="LOCAL" />
       <updated>1433078985158</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Saving the screenshots into their testcase folders">
+      <created>1433124194129</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1433124194129</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31363000" />
+    <option name="totallyTimeSpent" value="33772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="810" extended-state="6" />
@@ -914,7 +943,8 @@
     <MESSAGE value="evaluation of results" />
     <MESSAGE value="Writing of Results into Excel" />
     <MESSAGE value="TimeStamp" />
-    <option name="LAST_COMMIT_MESSAGE" value="TimeStamp" />
+    <MESSAGE value="Saving the screenshots into their testcase folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Saving the screenshots into their testcase folders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1028,55 +1058,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Sleeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/excel/TestPlanVOPrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="5" selection-start-line="16" selection-start-column="3" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2689#2690#0" expanded="true" />
-            <element signature="e#2724#2725#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-            <element signature="e#2387#2388#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1100,18 +1086,6 @@
             <element signature="e#3962#3963#0" expanded="true" />
             <element signature="e#4022#4023#0" expanded="true" />
             <element signature="e#4074#4075#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/html/TestPlanVOPrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1168,8 +1142,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/Screenshot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86353946">
+        <state vertical-scroll-proportion="0.0">
           <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/excel/TestPlanVOPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="5" selection-start-line="16" selection-start-column="3" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="137" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/excel/ExcelReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2122#2123#0" expanded="true" />
+            <element signature="e#2159#2160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/framework/util/html/HtmlWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/printers/html/TestPlanVOHtmlPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sg/ninjavan/autotest/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1044776">
+          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

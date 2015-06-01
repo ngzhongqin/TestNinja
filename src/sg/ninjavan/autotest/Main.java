@@ -3,6 +3,7 @@ package sg.ninjavan.autotest;
 import org.apache.log4j.*;
 import sg.ninjavan.autotest.framework.VO.TestPlanVO;
 import sg.ninjavan.autotest.printers.excel.TestPlanVOPrinter;
+import sg.ninjavan.autotest.printers.html.TestPlanVOHtmlPrinter;
 import sg.ninjavan.autotest.setters.TestPlanVOSetter;
 import sg.ninjavan.autotest.framework.util.excel.ExcelReader;
 import sg.ninjavan.autotest.drivers.TestPlanDriver;
@@ -29,6 +30,10 @@ public class Main {
         TestPlanVOPrinter testPlanVOPrinter = new TestPlanVOPrinter(result_test_plan);
         testPlanVOPrinter.start();
         testPlanVOPrinter.close();
+
+        //Print the results into the html report.
+        TestPlanVOHtmlPrinter testPlanVOHtmlPrinter = new TestPlanVOHtmlPrinter(result_test_plan);
+        testPlanVOHtmlPrinter.print();
 
 
         logger.info("End of AutoTest");

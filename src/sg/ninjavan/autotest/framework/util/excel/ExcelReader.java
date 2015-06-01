@@ -78,4 +78,8 @@ public class ExcelReader {
         }
         return returnInt;
     }
+
+    public String getReportTemplatePath() {
+        return getCell(0,2,4);
+    }
 }

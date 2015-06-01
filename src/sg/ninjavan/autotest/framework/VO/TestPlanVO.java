@@ -11,6 +11,8 @@ public class TestPlanVO {
     private ArrayList<TestCaseVO> testCaseVOs;
     private long time_started;
     private long time_ended;
+    private int total_test_case;
+    private int total_passed;
     public TestPlanVO(){
 
     }
@@ -52,5 +54,31 @@ public class TestPlanVO {
     public String getElapsedTime(){
         DateHandler dateHandler = new DateHandler();
         return dateHandler.getElapsedTime(this.time_started,this.time_ended);
+    }
+
+    public int getTotal_test_case() {
+        return total_test_case;
+    }
+
+    public void setTotal_test_case(int total_test_case) {
+        this.total_test_case = total_test_case;
+    }
+
+    public int getTotal_passed() {
+        return total_passed;
+    }
+
+    public void setTotal_passed(int total_passed) {
+        this.total_passed = total_passed;
+    }
+
+    public String getPercentagePassed(){
+        String percentagePassed = "0 %";
+        if(total_test_case!=0){
+            double percentage = ((double) total_passed / (double) total_test_case) * 100;
+            percentagePassed = Double.toString(percentage)+" %";
+        }
+
+        return percentagePassed;
     }
 }

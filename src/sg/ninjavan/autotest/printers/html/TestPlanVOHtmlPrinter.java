@@ -90,15 +90,15 @@ public class TestPlanVOHtmlPrinter {
                         + "<tr>" + "\n"
                         + "<tr>" + "\n"
                             + "<th width=\"20%\">Total Test Cases</th>" + "\n"
-                            + "<td width=\"20%\">time started Value</td>" + "\n"
+                            + "<td width=\"20%\">"+testPlanVO.getTotal_test_case()+"</td>" + "\n"
                         + "<tr>" + "\n"
                         + "<tr>" + "\n"
                             + "<th width=\"20%\">Passed Test Cases</th>" + "\n"
-                            + "<td width=\"20%\">time started Value</td>" + "\n"
+                            + "<td width=\"20%\">"+testPlanVO.getTotal_passed()+"</td>" + "\n"
                         + "<tr>" + "\n"
                         + "<tr>" + "\n"
                             + "<th width=\"20%\">% Passed</th>" + "\n"
-                            + "<td width=\"20%\">time started Value</td>" + "\n"
+                            + "<td width=\"20%\">"+testPlanVO.getPercentagePassed()+"</td>" + "\n"
                         + "<tr>" + "\n"
                 + "</table>" + "\n";
         return elapsedTime;

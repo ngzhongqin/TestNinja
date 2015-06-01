@@ -37,10 +37,44 @@ public class TestPlanDriver {
             i++;
         }
         testPlanVO.setTime_ended(System.currentTimeMillis());
+        testPlanVO.setTotal_test_case(getTotalTestCase());
+        testPlanVO.setTotal_passed(getTotalTestCasePassed());
         return testPlanVO;
     }
 
     public void close(){
         browser.closeBrowser();
+    }
+
+    private int getTotalTestCase(){
+        int i=0;
+        int size = -1;
+        if(testPlanVO!=null){
+            if(testPlanVO.getTestCaseVOs()!=null){
+                size = testPlanVO.getTestCaseVOs().size();
+            }
+        }
+
+        return size;
+    }
+
+    private int getTotalTestCasePassed(){
+        int i=0;
+        int size = -1;
+        if(testPlanVO!=null){
+            if(testPlanVO.getTestCaseVOs()!=null){
+                size = testPlanVO.getTestCaseVOs().size();
+            }
+        }
+        int passed =0;
+
+        while(i<size){
+            if(testPlanVO.getTestCaseVOs().get(i).isPassed()){
+                passed++;
+            }
+            i++;
+        }
+
+        return passed;
     }
 }

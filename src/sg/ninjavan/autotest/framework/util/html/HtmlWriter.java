@@ -16,17 +16,16 @@ public class HtmlWriter {
     public static Logger logger = Logger.getLogger(HtmlWriter.class);
 
 
-    public void print() {
+    public void print(String testPlanCover, String testCaseDetails) {
         try {
             ExcelReader excelReader = new ExcelReader();
             DateHandler dateHandler = new DateHandler();
             String templatePath = excelReader.getReportTemplatePath();
 
             String reportIn = new String(Files.readAllBytes(Paths.get(templatePath)));
-//            for (int i = 0; i < details.size();i++) {
-//                reportIn = reportIn.replaceFirst(resultPlaceholder,"<tr><td>" + Integer.toString(i+1) + "</td><td>" + details.get(i).getResult() + "</td><td>" + details.get(i).getResultText() + "</td></tr>" + resultPlaceholder);
-//            }
+            String resultPlaceHolder = "<PlaceHolder></PlaceHolder>";
 
+            reportIn=reportIn.replaceFirst(resultPlaceHolder, testPlanCover+testCaseDetails);
 
             dateHandler.getDateString();
 

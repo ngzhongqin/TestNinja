@@ -62,7 +62,7 @@ public class ActionVO {
             if (actionString.equals("CheckValue")) {
                 this.action = ActionType.CheckValue;
             }
-
+            this.actualValue=" ";
         }
 
         this.input=input;

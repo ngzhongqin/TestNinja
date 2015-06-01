@@ -1,6 +1,7 @@
 package sg.ninjavan.autotest.printers.html;
 
 import org.apache.log4j.Logger;
+import sg.ninjavan.autotest.framework.VO.TestCaseVO;
 import sg.ninjavan.autotest.framework.VO.TestPlanVO;
 import sg.ninjavan.autotest.framework.util.html.HtmlWriter;
 
@@ -16,8 +17,100 @@ public class TestPlanVOHtmlPrinter {
     }
 
     public void print(){
+        String testPlanCover = getTestPlanCover();
+        String testCaseDetails = getTestCaseDetails();
         HtmlWriter htmlWriter = new HtmlWriter();
-        htmlWriter.print();
+        htmlWriter.print(testPlanCover,testCaseDetails);
+
+
+    }
+
+    private String getTestCaseDetails() {
+        String testCaseDetails = null;
+        int i =0;
+        int size = -1;
+        if(testPlanVO!=null){
+            if(testPlanVO.getTestCaseVOs()!=null){
+                size = testPlanVO.getTestCaseVOs().size();
+
+            }
+        }
+
+        logger.info("getTestCaseDetails() int="+i+" size="+size);
+        TestCaseVOHtmlPrinter testCaseVOHtmlPrinter = new TestCaseVOHtmlPrinter();
+
+        if(size>0) {
+            //print the first test case
+            //so that the report wouldnt have null
+            testCaseDetails = testCaseVOHtmlPrinter.print(testPlanVO.getTestCaseVOs().get(0));
+            i++;
+
+            while (i < size) {
+                testCaseDetails = testCaseDetails + testCaseVOHtmlPrinter.print(testPlanVO.getTestCaseVOs().get(i));
+                i++;
+            }
+        }
+
+        return testCaseDetails;
+    }
+
+
+    private String getTestPlanCover() {
+        String testPlanCover= "<h2>Test Plan Summary</h2>"+ "\n"
+                + "<table border=\"1\" >" + "\n"
+                + "<tr>" + "\n"
+                + "<th width=\"10%\">TC</th>" + "\n"
+                + "<th width=\"50%\">Description</th>" + "\n"
+                + "<th width=\"10%\">Total Steps</th>" + "\n"
+                + "<th width=\"10%\">Total Pass</th>" + "\n"
+                + "<th width=\"10%\">Pass</th>" + "\n"
+                + "</tr>" + "\n"
+                + populateTestPlanDetails()
+                + "</table>" + "\n";
+
+        return testPlanCover;
+    }
+
+    private String populateTestPlanDetails(){
+        String testPlanDetails = null;
+
+        int i =0;
+        int size = -1;
+        if(testPlanVO!=null){
+            if(testPlanVO.getTestCaseVOs()!=null){
+                size = testPlanVO.getTestCaseVOs().size();
+
+            }
+        }
+
+        logger.info("populateTestPlanDetails() int="+i+" size="+size);
+        if(size>0) {
+            testPlanDetails = populateTestPlanDetailsItems(testPlanVO.getTestCaseVOs().get(0),0);
+            i++;
+            while (i < size) {
+                testPlanDetails = testPlanDetails + populateTestPlanDetailsItems(testPlanVO.getTestCaseVOs().get(i), i);
+                i++;
+            }
+        }
+
+
+        return testPlanDetails;
+    }
+
+    private String populateTestPlanDetailsItems(TestCaseVO testCaseVO, int i) {
+        String isPassed = "N";
+        if(testCaseVO.isPassed())
+            isPassed="Y";
+
+        String item =
+                "<tr>" + "\n"
+                + "<td width=\"10%\">"+ Integer.toString(i) +"</td>" + "\n"
+                + "<td width=\"50%\">"+ testCaseVO.getDescription()  + "</td>" + "\n"
+                + "<td width=\"10%\">"+ testCaseVO.getTotal_steps()  + "</td>" + "\n"
+                + "<td width=\"10%\">"+ testCaseVO.getTotal_steps_passed() +"</td>" + "\n"
+                + "<td width=\"10%\">"+ isPassed +"</td>" + "\n"
+                + "</tr>" + "\n";
+        return item;
     }
 
 }

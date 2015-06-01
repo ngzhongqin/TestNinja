@@ -11,38 +11,38 @@ public class ActionVODriver {
     }
 
 
-    public ActionVO start(ActionVO actionVO, Browser browser) {
+    public ActionVO start(ActionVO actionVO, Browser browser, int testCaseIndex) {
         logger.info("Start() ActionVO: SN="+actionVO.getSn()+" Description="+actionVO.getDescription());
         ActionVO returnActionVO = actionVO;
         if(actionVO!=null){
             switch (actionVO.getAction()){
                 case OpenBrowser:
                     returnActionVO = browser.openBrowser(actionVO);
-                    browser.takeScreenshot(actionVO);
+                    browser.takeScreenshot(actionVO,testCaseIndex);
                     break;
                 case EnterText:
                     returnActionVO = browser.enterTextBox(actionVO);
-                    browser.takeScreenshot(actionVO);
+                    browser.takeScreenshot(actionVO,testCaseIndex);
                     break;
                 case ClickButton:
                     returnActionVO = browser.clickButton(actionVO);
-                    browser.takeScreenshot(actionVO);
+                    browser.takeScreenshot(actionVO,testCaseIndex);
                     break;
                 case FileInput:
                     returnActionVO = browser.fileInput(actionVO);
-                    browser.takeScreenshot(actionVO);
+                    browser.takeScreenshot(actionVO,testCaseIndex);
                     break;
                 case DropDown:
                     returnActionVO = browser.dropDown(actionVO);
-                    browser.takeScreenshot(actionVO);
+                    browser.takeScreenshot(actionVO,testCaseIndex);
                     break;
                 case Hover:
                     returnActionVO =  browser.hover(actionVO);
-                    browser.takeScreenshot(actionVO);
+                    browser.takeScreenshot(actionVO,testCaseIndex);
                     break;
                 case CheckValue:
                     returnActionVO = browser.checkValue(actionVO);
-                    browser.takeScreenshot(actionVO);
+                    browser.takeScreenshot(actionVO,testCaseIndex);
                     break;
                 default:
                     break;

@@ -2,7 +2,7 @@ package sg.ninjavan.autotest.setters;
 
 import org.apache.log4j.Logger;
 import sg.ninjavan.autotest.framework.VO.ActionVO;
-import sg.ninjavan.autotest.framework.util.ExcelReader;
+import sg.ninjavan.autotest.framework.util.excel.ExcelReader;
 
 /**
  * Created by zhongqinng on 30/5/15.

@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import sg.ninjavan.autotest.framework.VO.ActionVO;
+import sg.ninjavan.autotest.framework.util.excel.ExcelReader;
 
 /**
  * Created by zhongqinng on 26/5/15.
@@ -147,9 +148,9 @@ public class Browser {
         return returnActionVO;
     }
 
-    public void takeScreenshot(ActionVO actionVO){
+    public void takeScreenshot(ActionVO actionVO, int testCaseIndex){
         Screenshot screenshot = new Screenshot(driver);
-        screenshot.takeScreenshot(actionVO);
+        screenshot.takeScreenshot(actionVO,testCaseIndex);
     }
 
 

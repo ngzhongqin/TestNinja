@@ -1,10 +1,12 @@
 package sg.ninjavan.autotest.framework.util;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import sg.ninjavan.autotest.framework.VO.ActionVO;
+import sg.ninjavan.autotest.framework.util.excel.ExcelReader;
 
 import java.io.File;
 
@@ -13,23 +15,26 @@ import java.io.File;
  */
 public class Screenshot {
     private WebDriver driver;
+    private Logger logger = Logger.getLogger(Screenshot.class);
     public Screenshot(WebDriver driver){
         this.driver=driver;
     }
 
-    public boolean takeScreenshot(ActionVO actionVO){
-
-        boolean returnBoolean = false;
+    public ActionVO takeScreenshot(ActionVO actionVO, int test_case){
+        ActionVO returnActionVO = actionVO;
         try {
             File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             ExcelReader excelReader=new ExcelReader();
-            FileUtils.copyFile(scrFile, new File(excelReader.getResultFolderPath()+"/screenshots/" + actionVO.getSn() + "_" + actionVO.getDescription() + ".png"));
-            returnBoolean = true;
+            String screenshotPath = excelReader.getResultFolderPath()+"/"
+                    + "screenshots/"
+                    + "TC_"+ Integer.toString(test_case)+"/"
+                    + actionVO.getSn() + "_" + actionVO.getDescription() + ".png";
+            FileUtils.copyFile(scrFile, new File(screenshotPath));
+            returnActionVO.setScreenshotPath(screenshotPath);
         }catch (Exception e){
-            returnBoolean = false;
-            System.out.println("<Error>: takeScreenshot Exception - "+e.getMessage());
+            logger.error("<Error>: takeScreenshot Exception");
         }
-        return returnBoolean;
+        return returnActionVO;
 
     }
 }

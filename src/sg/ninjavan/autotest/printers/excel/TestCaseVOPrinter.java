@@ -1,8 +1,8 @@
-package sg.ninjavan.autotest.printers;
+package sg.ninjavan.autotest.printers.excel;
 
 import org.apache.log4j.Logger;
 import sg.ninjavan.autotest.framework.VO.TestCaseVO;
-import sg.ninjavan.autotest.framework.util.ExcelWriter;
+import sg.ninjavan.autotest.framework.util.excel.ExcelWriter;
 
 /**
  * Created by zhongqinng on 31/5/15.
@@ -42,15 +42,17 @@ public class TestCaseVOPrinter {
 
     private void printColumnName(int sheet_num,ExcelWriter excelWriter){
         logger.info("printColumnName()");
-        excelWriter.writeCell(sheet_num, 0, 1, "S/N");
-        excelWriter.writeCell(sheet_num,1,1,"ActionType");
-        excelWriter.writeCell(sheet_num,2,1,"xPath");
-        excelWriter.writeCell(sheet_num,3,1,"Input");
-        excelWriter.writeCell(sheet_num,4,1,"Description");
-        excelWriter.writeCell(sheet_num, 5, 1, "Screenshot Needed");
-        excelWriter.writeCell(sheet_num,6,1,"Expected Value");
-        excelWriter.writeCell(sheet_num,7,1,"Actual Value");
-        excelWriter.writeCell(sheet_num, 8, 1, "Passed");
+        excelWriter.writeHeaderCell(sheet_num, 0, 1, "S/N");
+        excelWriter.writeHeaderCell(sheet_num, 1, 1, "Description");
+        excelWriter.writeHeaderCell(sheet_num, 2, 1, "Passed");
+        excelWriter.writeHeaderCell(sheet_num, 3, 1, "ActionType");
+        excelWriter.writeHeaderCell(sheet_num, 4, 1, "xPath");
+        excelWriter.writeHeaderCell(sheet_num, 5, 1, "Input");
+
+        excelWriter.writeHeaderCell(sheet_num, 6, 1, "Screenshot Needed");
+        excelWriter.writeHeaderCell(sheet_num, 7, 1, "Expected Value");
+        excelWriter.writeHeaderCell(sheet_num, 8, 1, "Actual Value");
+
     }
 
 }

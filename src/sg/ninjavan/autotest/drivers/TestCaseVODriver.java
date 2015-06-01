@@ -17,7 +17,7 @@ public class TestCaseVODriver {
         this.actionVODriver = new ActionVODriver();
     }
 
-    public TestCaseVO start(Browser browser,TestCaseVO testCaseVO) {
+    public TestCaseVO start(Browser browser,TestCaseVO testCaseVO, int testCaseIndex) {
         logger.info("start()");
         int i=0;
         int size = -1;
@@ -29,7 +29,7 @@ public class TestCaseVODriver {
         logger.info("start() i="+i+" size="+size);
 
         while (i<size){
-            actionVODriver.start(testCaseVO.getActionVOs().get(i),browser);
+            actionVODriver.start(testCaseVO.getActionVOs().get(i),browser,testCaseIndex);
             i++;
         }
 

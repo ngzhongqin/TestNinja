@@ -1,19 +1,16 @@
-package sg.ninjavan.autotest.printers;
+package sg.ninjavan.autotest.printers.excel;
 
-import jxl.Cell;
-import jxl.format.Colour;
-import jxl.format.Pattern;
 import org.apache.log4j.Logger;
 import sg.ninjavan.autotest.framework.VO.TestCaseVO;
 import sg.ninjavan.autotest.framework.VO.TestPlanVO;
-import sg.ninjavan.autotest.framework.util.ExcelWriter;
+import sg.ninjavan.autotest.framework.util.excel.ExcelWriter;
 
 /**
  * Created by zhongqinng on 31/5/15.
  * This class prints the result set of a TestPlan into excel sheet using the class ExcelWriter
  */
 public class TestPlanVOPrinter {
-    public static Logger logger = Logger.getLogger(TestPlanVOPrinter.class);
+    public  Logger logger = Logger.getLogger(TestPlanVOPrinter.class);
     private ExcelWriter excelWriter;
     private TestPlanVO testPlanVO;
 
@@ -45,11 +42,11 @@ public class TestPlanVOPrinter {
     private void printCoverPage(){
 
         excelWriter.createSheet("Cover",0);
-        excelWriter.writeCell(0,0,0,"TC");
-        excelWriter.writeCell(0,1,0,"Description");
-        excelWriter.writeCell(0,2,0,"Total Steps");
-        excelWriter.writeCell(0,3,0,"Total Pass");
-        excelWriter.writeCell(0,4,0,"Pass");
+        excelWriter.writeHeaderCell(0, 0, 0, "TC");
+        excelWriter.writeHeaderCell(0, 1, 0, "Description");
+        excelWriter.writeHeaderCell(0, 2, 0, "Total Steps");
+        excelWriter.writeHeaderCell(0, 3, 0, "Total Pass");
+        excelWriter.writeHeaderCell(0,4,0,"Pass");
 
         int i =0;
         int size = -1;

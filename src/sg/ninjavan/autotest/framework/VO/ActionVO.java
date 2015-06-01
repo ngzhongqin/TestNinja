@@ -17,6 +17,7 @@ public class ActionVO {
     private String expectedValue;
     private String actualValue;
     private boolean pass_fail;
+    private String screenshotPath;
 
     public ActionVO(String sn,
                     String actionString,
@@ -150,5 +151,13 @@ public class ActionVO {
 
     public void setPass_fail(boolean pass_fail) {
         this.pass_fail = pass_fail;
+    }
+
+    public String getScreenshotPath() {
+        return screenshotPath;
+    }
+
+    public void setScreenshotPath(String screenshotPath) {
+        this.screenshotPath = screenshotPath;
     }
 }

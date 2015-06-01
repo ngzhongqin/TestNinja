@@ -1,4 +1,4 @@
-package sg.ninjavan.autotest.framework.util;
+package sg.ninjavan.autotest.framework.util.excel;
 
 
 import jxl.Cell;

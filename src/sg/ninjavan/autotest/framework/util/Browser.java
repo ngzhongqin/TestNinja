@@ -71,10 +71,7 @@ public class Browser {
         returnActionVO.setPass_fail(false);
         try {
 
-            WebElement element = driver.findElement(By.xpath(returnActionVO.getxPath()));
-            Actions actions = new Actions(driver);
-            actions.moveToElement(element);
-            actions.perform();
+            moveToElement(returnActionVO);
 
             driver.findElement(By.xpath(returnActionVO.getxPath())).click();
 
@@ -103,6 +100,8 @@ public class Browser {
         ActionVO returnActionVO = actionVO;
         returnActionVO.setPass_fail(false);
         try {
+            moveToElement(returnActionVO);
+
             driver.findElement(By.xpath(returnActionVO.getxPath())).sendKeys(returnActionVO.getInput());
 
             returnActionVO.setPass_fail(true);
@@ -118,6 +117,9 @@ public class Browser {
         ActionVO returnActionVO = actionVO;
         returnActionVO.setPass_fail(false);
         try {
+
+            moveToElement(returnActionVO);
+
             Select select = new Select( driver.findElement(By.xpath(returnActionVO.getxPath())));
             select.deselectAll();
             select.selectByValue(returnActionVO.getInput());
@@ -134,10 +136,7 @@ public class Browser {
         ActionVO returnActionVO = actionVO;
         returnActionVO.setPass_fail(false);
         try {
-            WebElement element = driver.findElement(By.xpath(returnActionVO.getxPath()));
-            Actions actions = new Actions(driver);
-            actions.moveToElement(element);
-            actions.perform();
+            moveToElement(returnActionVO);
             Sleeper sleeper = new Sleeper();
             //hover takes more time
             sleeper.sleep(4);
@@ -153,6 +152,8 @@ public class Browser {
     public ActionVO checkValue(ActionVO actionVO){
         ActionVO returnActionVO = actionVO;
         try {
+            moveToElement(returnActionVO);
+
             WebElement element = driver.findElement(By.xpath(returnActionVO.getxPath()));
             String actualValue = element.getText();
             returnActionVO.setActualValue(actualValue);
@@ -174,6 +175,11 @@ public class Browser {
         screenshot.takeScreenshot(actionVO,testCaseIndex);
     }
 
-
+    public void moveToElement(ActionVO actionVO){
+        WebElement element = driver.findElement(By.xpath(actionVO.getxPath()));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element);
+        actions.perform();
+    }
 
 }

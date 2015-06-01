@@ -42,11 +42,11 @@ public class TestPlanVOHtmlPrinter {
         if(size>0) {
             //print the first test case
             //so that the report wouldnt have null
-            testCaseDetails = testCaseVOHtmlPrinter.print(testPlanVO.getTestCaseVOs().get(0));
+            testCaseDetails = testCaseVOHtmlPrinter.print(testPlanVO.getTestCaseVOs().get(0), 0);
             i++;
 
             while (i < size) {
-                testCaseDetails = testCaseDetails + testCaseVOHtmlPrinter.print(testPlanVO.getTestCaseVOs().get(i));
+                testCaseDetails = testCaseDetails + testCaseVOHtmlPrinter.print(testPlanVO.getTestCaseVOs().get(i), i);
                 i++;
             }
         }

@@ -12,14 +12,15 @@ public class TestCaseVOHtmlPrinter {
         actionVOHtmlPrinter = new ActionVOHtmlPrinter();
     };
 
-    public String print(TestCaseVO testCaseVO){
+    public String print(TestCaseVO testCaseVO, int testCaseIndex){
         String testCaseString =
-                "<h3>"+ testCaseVO.getDescription() +"</h3>"+ "\n"
+                "<h3>"+ "TC_"+Integer.toString(testCaseIndex)+" "+testCaseVO.getDescription() +"</h3>"+ "\n"
                 + "<table border=\"1\" >" + "\n"
                 + "<tr>" + "\n"
-                        + "<th width=\"5%\">"+ "S/N" +"</th>" + "\n"
+                        + "<th width=\"4%\">"+ "S/N" +"</th>" + "\n"
                         + "<th width=\"20%\">"+ "Description"  + "</th>" + "\n"
-                        + "<th width=\"5%\">"+ "Pass"  + "</th>" + "\n"
+                        + "<th width=\"4%\">"+ "Screenshot"  + "</th>" + "\n"
+                        + "<th width=\"2%\">"+ "Pass"  + "</th>" + "\n"
                         + "<th width=\"10%\">"+ "ActionType" +"</th>" + "\n"
                         + "<th width=\"20%\">"+ "xPath" +"</th>" + "\n"
                         + "<th width=\"20%\">"+ "Input" +"</th>" + "\n"

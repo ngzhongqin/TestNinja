@@ -17,9 +17,10 @@ public class ActionVOHtmlPrinter {
 
         String actionVoDetail =
                 "<tr>" + "\n"
-                        + "<td width=\"5%\">"+ actionVO.getSn() +"</td>" + "\n"
+                        + "<td width=\"4%\">"+ actionVO.getSn() +"</td>" + "\n"
                         + "<td width=\"20%\">"+ actionVO.getDescription()  + "</td>" + "\n"
-                        + "<td width=\"5%\">"+ isPassed  + "</td>" + "\n"
+                        + "<td width=\"4%\">"+ "<a href=\""+ actionVO.getScreenshotPath() + "\">Screenshot</a>"+ "</td>" + "\n"
+                        + "<td width=\"2%\">"+ isPassed  + "</td>" + "\n"
                         + "<td width=\"10%\">"+ actionVO.getAction().toString() +"</td>" + "\n"
                         + "<td width=\"20%\">"+ actionVO.getxPath() +"</td>" + "\n"
                         + "<td width=\"20%\">"+ actionVO.getInput() +"</td>" + "\n"

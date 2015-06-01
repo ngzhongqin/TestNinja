@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="TestNinja">
+    <output-path>$PROJECT_DIR$/out/artifacts/TestNinja</output-path>
+    <properties id="ant-postprocessing">
+      <options enabled="true" />
+    </properties>
+    <root id="archive" name="TestNinja.jar">
+      <element id="module-output" name="TestNinja" />
+    </root>
+  </artifact>
+</component>

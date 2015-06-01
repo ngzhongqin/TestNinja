@@ -19,6 +19,7 @@ public class TestCaseVODriver {
 
     public TestCaseVO start(Browser browser,TestCaseVO testCaseVO, int testCaseIndex) {
         logger.info("start()");
+        testCaseVO.setTime_started(System.currentTimeMillis());
         int i=0;
         int size = -1;
         if(testCaseVO!=null){
@@ -34,6 +35,7 @@ public class TestCaseVODriver {
         }
 
         testCaseVO = setTotalAndPassedSteps(testCaseVO);
+        testCaseVO.setTime_ended(System.currentTimeMillis());
         return testCaseVO;
     }
 

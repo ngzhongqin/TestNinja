@@ -18,4 +18,39 @@ public class DateHandler {
 
         return string;
     }
+
+    public String getDateStringFromLong(long time){
+        Date d = new Date(time);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MMM-dd HH:mm:ss");
+        String string  = dateFormat.format(d);
+        return string;
+    }
+
+    public String getElapsedTime(long startTime, long endTime){
+
+        //milliseconds
+        long different = endTime - startTime;
+
+        long secondsInMilli = 1000;
+        long minutesInMilli = secondsInMilli * 60;
+        long hoursInMilli = minutesInMilli * 60;
+        long daysInMilli = hoursInMilli * 24;
+
+        long elapsedDays = different / daysInMilli;
+        different = different % daysInMilli;
+
+        long elapsedHours = different / hoursInMilli;
+        different = different % hoursInMilli;
+
+        long elapsedMinutes = different / minutesInMilli;
+        different = different % minutesInMilli;
+
+        long elapsedSeconds = different / secondsInMilli;
+
+        String elapsedTime = elapsedDays+" days "+elapsedHours+" hours "+elapsedMinutes+" minutes "+elapsedSeconds+" seconds";
+
+        return elapsedTime;
+
+    }
+
 }

@@ -21,6 +21,7 @@ public class TestPlanDriver {
 
     public TestPlanVO start(){
         logger.info("start()");
+        testPlanVO.setTime_started(System.currentTimeMillis());
         int i=0;
         int size = -1;
         if(testPlanVO!=null){
@@ -35,7 +36,7 @@ public class TestPlanDriver {
             testCaseVODriver.start(browser,testCaseVO,i);
             i++;
         }
-
+        testPlanVO.setTime_ended(System.currentTimeMillis());
         return testPlanVO;
     }
 

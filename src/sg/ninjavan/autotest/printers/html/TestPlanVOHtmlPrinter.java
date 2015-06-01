@@ -56,7 +56,9 @@ public class TestPlanVOHtmlPrinter {
 
 
     private String getTestPlanCover() {
-        String testPlanCover= "<h2>Test Plan Summary</h2>"+ "\n"
+        String testPlanCover= "<h1>Ninja Test Plan</h1>"+ "\n"
+                + populateElapsedTime()
+                + "<h2>Test Cases</h2>"+ "\n"
                 + "<table border=\"1\" >" + "\n"
                 + "<tr>" + "\n"
                 + "<th width=\"10%\">TC</th>" + "\n"
@@ -69,6 +71,37 @@ public class TestPlanVOHtmlPrinter {
                 + "</table>" + "\n";
 
         return testPlanCover;
+    }
+
+    private String populateElapsedTime(){
+        String elapsedTime =
+                "<table border=\"1\" >" + "\n"
+                        + "<tr>" + "\n"
+                            + "<th width=\"20%\">Start Time</th>" + "\n"
+                            + "<td width=\"20%\">"+testPlanVO.getStartTime()+"</td>" + "\n"
+                        + "<tr>" + "\n"
+                        + "<tr>" + "\n"
+                            + "<th width=\"20%\">Elapsed Time</th>" + "\n"
+                            + "<td width=\"20%\">"+testPlanVO.getElapsedTime()+"</td>" + "\n"
+                        + "<tr>" + "\n"
+                        + "<tr>" + "\n"
+                            + "<th width=\"20%\">End Time</th>" + "\n"
+                            + "<td width=\"20%\">"+testPlanVO.getEndTime()+"</td>" + "\n"
+                        + "<tr>" + "\n"
+                        + "<tr>" + "\n"
+                            + "<th width=\"20%\">Total Test Cases</th>" + "\n"
+                            + "<td width=\"20%\">time started Value</td>" + "\n"
+                        + "<tr>" + "\n"
+                        + "<tr>" + "\n"
+                            + "<th width=\"20%\">Passed Test Cases</th>" + "\n"
+                            + "<td width=\"20%\">time started Value</td>" + "\n"
+                        + "<tr>" + "\n"
+                        + "<tr>" + "\n"
+                            + "<th width=\"20%\">% Passed</th>" + "\n"
+                            + "<td width=\"20%\">time started Value</td>" + "\n"
+                        + "<tr>" + "\n"
+                + "</table>" + "\n";
+        return elapsedTime;
     }
 
     private String populateTestPlanDetails(){

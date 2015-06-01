@@ -11,6 +11,8 @@ public class TestCaseVO {
     private int total_steps;
     private int total_steps_passed;
     private boolean passed;
+    private long time_started;
+    private long time_ended;
 
     public TestCaseVO(String description, ArrayList<ActionVO> actionVOs){
         this.description = description;
@@ -61,5 +63,21 @@ public class TestCaseVO {
 
     public void setPassed(boolean passed) {
         this.passed = passed;
+    }
+
+    public long getTime_started() {
+        return time_started;
+    }
+
+    public void setTime_started(long time_started) {
+        this.time_started = time_started;
+    }
+
+    public long getTime_ended() {
+        return time_ended;
+    }
+
+    public void setTime_ended(long time_ended) {
+        this.time_ended = time_ended;
     }
 }
